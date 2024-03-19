@@ -1,0 +1,145 @@
+@use '../base/var.scss';
+
+.header {
+    background-color: transparent;
+    height: 56px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    &__container {
+        background-color: var.$colorPrimary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+
+    &__logo {
+        
+        a {
+            display: flex;
+            align-items: center;
+            margin-left: 24px;
+            margin-right: 48px;
+
+            img {
+                width: 120px;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+
+        span, svg, path {
+            width: 25px;
+            height: 22px;
+            color: var.$colorTextDark;
+        }
+
+        .search-icon svg, path {
+            height: 100%;
+            width: 32px;
+            color: var.$colorTextDark;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            
+            &__link {
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 16px;
+                    justify-content: center;
+
+                    &:hover {
+                        color: var.$colorText;
+                        background-color: var.$color4;
+                        transition: all 0.2s ease-in-out;
+    
+                        span > svg path {
+                            color: var.$colorText;
+                            transition: all 0.2s ease-in-out;
+                            
+                        }
+
+                        span {
+                            transform: rotate(180deg);
+                            transition: all 0.2s ease-in-out;
+                        }
+                    }
+                }
+
+                &__submenu {
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: var.$color4;
+                    border-radius: 0 0 12px 12px;
+                    min-width: 100%;
+                    width: auto;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    overflow: hidden;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+                    transition: all 0.2s ease-in-out;
+                    text-wrap: nowrap;
+
+                    &--is-inverse {
+                        right: 0;
+                        left: auto;
+                    }
+
+                    li {
+                        padding: 12px;
+
+                        &:hover {
+                            background-color: var.$colorText;
+                            transition: all 0.2s ease-in-out;
+                            
+                            a {
+                                color: var.$colorPrimary;
+                                transition: all 0.2s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

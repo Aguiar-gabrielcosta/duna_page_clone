@@ -4,7 +4,7 @@
     background-image: url('../images/hero/dune_hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
 
     &__container {
         background: linear-gradient(100deg, var.$colorPrimary, hsla(217, 100%, 3%, 0.9), 50%,transparent), linear-gradient(to top, var.$colorPrimary, 10%, transparent);
