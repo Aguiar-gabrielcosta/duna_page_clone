@@ -22,10 +22,14 @@
             display: inline-block;
             padding: 4px;
             color: var.$colorTextFooter;
+            font-size: 0.9375rem;
+            font-weight: 400;
             margin: 0 4px;
 
             &__link {
                 text-decoration: none;
+                font-size: 0.9375rem;
+                font-weight: 400;
                 color: var.$colorTextFooterLink;
                 transition: color 0.2s ease-in-out;
 

@@ -1,0 +1,201 @@
+@use '../base/var.scss';
+
+.hero {
+    background-image: url('../images/hero/dune_hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &__container {
+        background: linear-gradient(100deg, var.$colorPrimary, hsla(217, 100%, 3%, 0.9), 50%,transparent), linear-gradient(to top, var.$colorPrimary, 10%, transparent);
+        min-height: 90vh;
+        padding: 0 72px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        align-self: flex-end;
+        width: 95px;
+        margin-top: 24px;
+    }
+
+    &__info {
+        width: 100%;
+
+        &__extra {
+            margin-bottom: 32px;
+            width: 100%;
+        }
+
+        &__details {
+            max-width: 1200px;
+            width: 100%;
+
+            &__title {
+                margin-bottom: 52px;
+            }
+
+            &__desc {
+                max-width: 825px;
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
+            &__class {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 520px;
+                width: 100%;
+                margin-bottom: 16px;
+
+                &__badges {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 265px;
+                    width: 100%;
+
+                    &__badge {
+                        display: block;
+                        background-color: var.$colorTerciary;
+                        border-radius: 3px;
+                        padding: 3px 7px;
+                        font-weight: 700;
+                        font-size: 1rem;
+                        line-height: 1rem;
+                        text-transform: uppercase;
+                    }
+
+                    &__badgesvg {
+                        display: flex;
+                        font-weight: 500px;
+                        font-size: 1.25rem;
+                        background-color: var.$colorTerciary;
+                        border-radius: 3px;
+                        padding: 3px;
+                        
+                        .svg_sub {
+                            display: flex;
+                            height: 16px;
+                            width: 16px;
+                            padding: 0;
+                        }
+
+                        .svg_ad {
+                            display: flex;
+                            height: 16px;
+                            width: 38px;
+                            padding: 0;
+                        }
+                    }
+    
+                    img {
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
+            }
+
+            &__genre {
+                margin-bottom: 32px;
+            
+                &__list {
+                    display: flex;
+
+                    &__item {
+                        list-style: none;
+                    }
+
+                    .dot {
+                        list-style: none;
+                        margin: 0 8px;
+                        padding-bottom: 7.2px;
+                        font-family: 'Ember_Display';
+                        font-size: 1.125rem;
+                        line-height: 1.125rem;
+                        color: var.$colorTextDark;
+                    }
+                }
+            }
+
+            &__actions {
+
+                &__warning {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 16px;
+
+                    span {
+                        margin-right: 8px;
+                    }
+
+                    span path {
+                        color: #1a98ff;
+                    }
+                }
+
+                &__buttons {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 16px;
+                    row-gap: 24px;
+                    max-width: 1200px;
+                    width: 100%;
+
+                    &__rent {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        max-width: 740px;
+                        width: 100%;
+
+                        button:nth-child(2) {
+                            max-width: 220px;
+                            width: 100%;
+                        }
+
+                        button:nth-child(3) {
+                            max-width: 190px;
+                            width: 100%;
+                        }
+                    }
+
+                    &__act {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        max-width: 426px;
+                        width: 100%;
+
+                        span, svg {
+                            width: 33px;
+                            height: 33px;
+                        }
+
+                        label {
+                            display: none;
+                        }
+                    }
+                }
+
+                &__disclamer {
+                    margin-bottom: 16px;
+
+                    p {
+                        font-size: 1.125rem;
+                        line-height: calc(1.125rem * 1.389);
+                        letter-spacing: 0.4px;
+                    }
+                }
+            }
+        }
+    }
+}

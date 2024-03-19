@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var.$fontStd;
+    font-size: 16px;
+    font-weight: 500;
+    color: var.$colorText;
 }
 
 body {
@@ -14,49 +17,107 @@ body {
 
 .text {
     font-family: var.$fontStd;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 1.25rem;
+    line-height: calc(1.25rem * 1.15);
     color: var.$colorText;
-    font-weight: 600;
-
-    &--nav {
-        line-height: 25px;
-        letter-spacing: 0.4px;
-    }
-
-    &--desc {
-        line-height: 28px;
-    }
+    font-weight: 500;
 
     &--dark {
         color: var.$colorTextDark;
     }
 
     &--small{
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     &--tiny{
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     &--regular {
         font-weight: 400;
-        line-height: 20px;
+        line-height: 1.25rem;
     }
 
     &--bold {
-        font-weight: 800;
-        line-height: 28px;
+        font-weight: 700;
+        line-height: 1.75rem;
+    }
+
+    &--desc {
+        line-height: 1.75rem;
+    }
+
+    &--nav {
+        line-height: 1.5625rem;
+        letter-spacing: 0.4px;
     }
 }
 
 
 .display {
     font-family: var.$fontDisplay;
-    font-size: 50px;
-    line-height: 62.2px;
+    font-size: 3.125rem;
+    line-height: calc(3.125rem * 1.344);
     letter-spacing: 0.5px;
     font-weight: 900;
     color: var.$colorText;
+}
+
+.link {
+    color: var.$colorText;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.button {
+    background-color: rgb(255, 255, 255, 0.2);
+    color: var.$colorText;
+    text-align: left;
+    border-radius: 8px;
+    height: 62px;
+    padding: 8px 21px;
+    cursor: pointer;
+    border: none;
+
+    span {
+        font-weight: 700;
+    }
+
+    &:hover {
+        background-color: rgb(255, 255, 255);
+        color: var.$colorPrimary;
+        transform: scale(1.05);
+        transition: all 0.5s cubic-bezier(.25, 1, .5, 1);
+
+        span {
+            color: var.$colorPrimary;
+
+            svg path {
+                color: var.$colorPrimary;
+            }
+        }
+
+        
+    }
+
+    &--light {
+        background-color: rgb(255, 255, 255);
+        color: var.$colorPrimary;
+
+        span {
+            color: var.$colorPrimary;
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+    }
+
+    &--rounded {
+        display: flex;
+        border-radius: 50%;
+        width: 62px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }
