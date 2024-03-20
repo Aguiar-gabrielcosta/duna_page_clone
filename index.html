@@ -8,7 +8,7 @@
     <title>[Clone] Prime Video: Duna</title>
 </head>
 <body>
-
+    
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
@@ -117,7 +117,7 @@
             </div>
         </div>
     </header>
-    
+
     <main>
 
         <section class="hero">
@@ -272,14 +272,14 @@
         <section class="more">
             <div class="more__container">
                 <div class="more__buttons">
-                    <button class="more__buttons__button more__buttons__button--is-active">
-                        <span class="text text--dark">Relacionados</span>
+                    <button data-tab-target="related" class="more__buttons__button more__buttons__button--is-active text text--dark">
+                        Relacionados
                     </button>
-                    <button class="more__buttons__button">
-                        <span class="text text--dark">Detalhes</span>
+                    <button data-tab-target="description" class="more__buttons__button text text--dark">
+                        Detalhes
                     </button>
                 </div>
-                <div class="more__sections more__sections--show">
+                <div data-tab-name="related" class="more__sections more__sections--show">
                     <h3 class="more__sections__title text text--bold">Os clientes também assistiram</h3>
                     <div class="more__sections__related">
                         <a href="#" class="more__sections__related_item"><img src="dist/images/related/valerian.jpg" alt="Valerian"></a>
@@ -304,7 +304,7 @@
                         <a href="#" class="more__sections__related_item"><img src="dist/images/related/tenet.jpg" alt="Tenet"></a>
                     </div>
                 </div>
-                <div class="more__sections">
+                <div data-tab-name="description" class="more__sections">
                     <h3 class="more__sections__title text text--bold">Saiba mais</h3>
                     <div class="more__sections__description">
                         <div class="more__sections__description__item">
@@ -374,5 +374,6 @@
         </div>
     </footer>
 
+    <script type="module" src="dist/scripts/main.js"></script>
 </body>
 </html>

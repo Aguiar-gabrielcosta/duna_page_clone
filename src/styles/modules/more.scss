@@ -14,20 +14,15 @@
         &__button {
             background-color: transparent;
             padding: 6px 8px;
+            margin: 6px 8px;
             border: none;
             letter-spacing: 0.4px;
             cursor: pointer;
-
-            span {
-                padding: 6px 8px;
-            }
             
             &--is-active {
-
-                span {
-                    color: var.$colorText;
-                    border-bottom: 3px solid var.$colorText;
-                }
+                
+                border-bottom: 4px solid var.$colorText;
+                color: var.$colorText;
             }
 
             &:hover {
