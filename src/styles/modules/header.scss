@@ -85,6 +85,10 @@
                     height: 100%;
                     padding: 0 16px;
                     justify-content: center;
+                    
+                    span {
+                        z-index: 0;
+                    }
 
                     &:hover {
                         color: var.$colorText;
@@ -119,6 +123,10 @@
                     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
                     transition: all 0.2s ease-in-out;
                     text-wrap: nowrap;
+
+                    &--is-active {
+                        display: flex;
+                    }
 
                     &--is-inverse {
                         right: 0;
