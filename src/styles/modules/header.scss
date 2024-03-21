@@ -85,12 +85,8 @@
                     height: 100%;
                     padding: 0 16px;
                     justify-content: center;
-                    
-                    span {
-                        z-index: 0;
-                    }
 
-                    &:hover {
+                    &:hover, &--is-active {
                         color: var.$colorText;
                         background-color: var.$color4;
                         transition: all 0.2s ease-in-out;
