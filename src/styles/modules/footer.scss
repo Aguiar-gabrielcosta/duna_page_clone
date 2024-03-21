@@ -17,6 +17,8 @@
 
     &__content {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         &__item {
             display: inline-block;

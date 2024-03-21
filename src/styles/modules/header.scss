@@ -7,6 +7,10 @@
     top: 0px;
     z-index: 1;
 
+    @media (max-width: 1024px) {
+        height: 38px;
+    }
+
     &__container {
         background-color: var.$colorPrimary;
         display: flex;
@@ -16,6 +20,12 @@
         width: fit-content;
         margin: 0 auto;
         border-radius: 8px;
+
+        @media (max-width: 1024px) {
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;   
+        }
     }
 
     &__logo {
@@ -25,6 +35,10 @@
             align-items: center;
             margin-left: 24px;
             margin-right: 48px;
+            
+            @media (max-width: 1024px) {
+                margin: 0;
+            }
 
             img {
                 width: 120px;
@@ -37,6 +51,12 @@
         flex-direction: row;
         align-items: center;
         height: 100%;
+
+        @media (max-width: 1024px) {
+            &:first-of-type {
+                order: -1;
+            }
+        }
 
         span, svg, path {
             width: 25px;
@@ -53,10 +73,6 @@
         img {
             width: 32px;
             height: 32px;
-        }
-
-        h2 {
-            display: none;
         }
 
         li {
@@ -86,6 +102,10 @@
                     padding: 0 16px;
                     justify-content: center;
 
+                    @media (max-width: 1024px) {   
+                        display: none;
+                    }
+
                     &:hover, &--is-active {
                         color: var.$colorText;
                         background-color: var.$color4;
@@ -100,6 +120,20 @@
                         span {
                             transform: rotate(180deg);
                             transition: all 0.2s ease-in-out;
+                        }
+                    }
+
+                    &--responsive-menu {
+                        &.hidden {
+                            display: none;
+                        }
+
+                        @media (max-width: 1024px) {
+                            display: flex;
+
+                            &.hidden {
+                                display: flex;
+                            }
                         }
                     }
                 }
@@ -120,8 +154,18 @@
                     transition: all 0.2s ease-in-out;
                     text-wrap: nowrap;
 
+                    @media (max-width: 1024px) {
+                        left: auto;
+                        width: fit-content;
+                    }
+
                     &--is-active {
                         display: flex;
+
+                        @media (max-width: 1024px) {
+                            display: block;
+                            width: 100vw;
+                        }
                     }
 
                     &--is-inverse {

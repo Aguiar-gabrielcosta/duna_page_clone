@@ -8,10 +8,28 @@
     font-size: 16px;
     font-weight: 500;
     color: var.$colorText;
+
+    @media (max-width: 1024px) {
+        font-size: 14.4px;
+    }
+
+    @media (max-width: 875px) {
+        font-size: 12.8px;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 11.2px;
+    }
 }
 
 body {
     background-color: var.$colorPrimary;
+
+    @media (max-width: 1024px) {
+        &::-webkit-scrollbar {
+            display: none;
+        } 
+    }
 }
 
 
@@ -75,7 +93,7 @@ body {
     color: var.$colorText;
     text-align: left;
     border-radius: 8px;
-    height: 62px;
+    height: 3.875rem;
     padding: 8px 21px;
     cursor: pointer;
     border: none;
@@ -115,7 +133,7 @@ body {
     &--rounded {
         display: flex;
         border-radius: 50%;
-        width: 62px;
+        width: 3.875rem;
         padding: 0;
         justify-content: center;
         align-items: center;
